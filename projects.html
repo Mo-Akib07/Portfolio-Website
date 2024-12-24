@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Mohammad Akib</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hero hero2">
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+          <div class="menu-container">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="myresume.html" >My Resume</a></li>
+              <li><a href="projects.html" class="active">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contect.html">Contact Info</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <h1>Projects</h1>
+    <div class="underline"></div>
+  </div>
+  <section class="projects-section">
+    <!-- Example Project Card -->
+    <div class="project-card">
+      <div class="project-image">
+        <!-- Replace with your video thumbnail or image -->
+        <a href="https://github.com/Mo-Akib07/python_projects.git" target="_blank"><img src="img/Python projects banner.jpg" alt="Python Projects"></a>
+      </div>
+      <div class="project-details">
+        <h3><a href="https://github.com/Mo-Akib07/python_projects.git" target="_blank">Python Projects</a></h3>
+        <p>This directory hosts an array of Python projects developed using Visual Studio Code. The projects range from basic to advanced levels and include libraries such as NumPy, Pandas.    </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Mohammad Akib. All rights reserved.</p>
+  </footer>
+  <script>
+    const menuButton = document.getElementById('menuButton');
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+  </script>
+
+</body>
+</html>
