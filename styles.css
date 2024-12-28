@@ -1,63 +1,41 @@
-/* General Reset */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+  }
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
+
+
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f6f0f0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header Section */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    margin-top: -5%;
-    margin-bottom: 4%;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #00aaff;
-}
-
-
-/* Hero Section */
-.hero {
-    background: url('img/Home\ Hader\ background.jpg') no-repeat center center/cover;
-    text-align: center;
-    padding: 75px 20px;
+.hero{
+    /* text-align: center; */
+    padding-bottom: 75px;
     color: rgb(255, 255, 255);
 }
 
 .hero h1 {
     font-size: 3rem;
+    text-align: center;
     margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 .hero .underline {
@@ -67,10 +45,137 @@ header nav ul li a:hover {
     margin: 0 auto;
 }
 
+
+
+nav {
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 13px 7px;
+    margin-left: 10px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+/* a.active,
+a:hover {
+    background: #1b9bff;
+    transition: .5s;
+} */
+
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    float: right;
+    line-height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    display: none;
+}
+.checkbtn i{
+    margin-top: 5px;
+}
+
+.toggles{
+    display: block;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+ /* Responsive media query code for small screen */
+ @media (max-width: 890px) {
+    .checkbtn {
+        display: block;
+    }
+
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 40px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .about{
+        margin: 0 20px;
+    }
+    .underline{
+    height: 1px;
+    background-color: #000000;
+    margin: 0 10% 5%;
+    width: 100%; 
+    }
+
+}
+
+
+/* ---------------------------------------- home page -------------------------------------*/
+
+.hr_bg1{
+    background: url('img/Home\ Hader\ background.jpg') no-repeat center center/cover;
+}
+
 /* About Section */
 .about {
-    /* padding: 50px 20px; */
     text-align: center;
+    padding-top: 30px;
 }
 
 .description h2 {
@@ -103,7 +208,6 @@ header nav ul li a:hover {
 .about .description p {
     margin-bottom: 15px;
     font-size: 1rem;
-    color: #555;
     text-align: justify;
 }
 
@@ -114,23 +218,8 @@ header nav ul li a:hover {
     margin-left: 10.1%;
     margin-right:18%;
     width: 100%;
-    
 }
 
-@media (max-width: 768px) {
-    .hero h1{
-        font-size: 2rem;
-    }
-    .about{
-        margin: 0 20px;
-    }
-    .underline{
-        height: 1px;
-        background-color: #000000;
-        margin: 0 10% 5%;
-        width: 100%; 
-    }
-}
 
 /* Keyword Section */
 .keywords{
@@ -139,30 +228,16 @@ header nav ul li a:hover {
 }
 .keywords ul {
     padding-left: 1%; 
+
 } 
-footer p{
-    margin-bottom: -3%;
-}
-footer {  
-    background-color: #d1cccc;
-    color: #000000; 
-    text-align: center; 
-    width: 100%;
-    margin-bottom: -3%;
-}
 
-/* RESUME SECTION */
 
-/* Hero Section */
-.hero1 {
+/* -------------------------------------------- RESUME PAGE --------------------------------------------*/
+
+.hr_bg2{
     background: url('img/resume\ header\ background.jpeg') no-repeat center center/cover;
-    text-align: center;
-    /* height: 266px; */
-    padding: 75px 20px;
-    color: rgb(255, 255, 255);
 }
 
-/* Resume Content Section */
 .resume-content {
     padding: 50px 20px;
     text-align: center;
@@ -246,8 +321,6 @@ footer {
     margin-bottom: 30px;
 }
 
-
-
 .btn {
     text-align: center;
     background-color: #576C7E;
@@ -256,21 +329,19 @@ footer {
     padding: 12px 30px;
     cursor: pointer;
     font-size: 20px;
-  }
+}
 
-  .btn a{
+.btn a{
     text-decoration: none;
     color: #fff;
-  }
+}
   
-  /* Darker background on mouse-over */
-  .btn:hover {
+/* Darker background on mouse-over */
+.btn:hover {
     background-color: black;
     color: #fff;
     box-shadow: #d1cccc;
-  }
-
-
+}
 
 
 @media (max-width: 768px) {
@@ -287,15 +358,15 @@ footer {
 }
 
 
+/* -------------------------------------------- projects PAGE & BLOG--------------------------------------------*/
 
 
-
-
-.hero2{
+.hr_bg3{
     background: url('img/project\ Header.jpg') no-repeat center center/cover;
-    text-align: center;
-    padding: 75px 20px;
-    color: rgb(255, 255, 255);
+}
+
+.hr_bg4{
+    background: url('img/blog1\ \(2\).jpg') no-repeat center center/cover;
 }
 
 /* Header Section */
@@ -335,15 +406,14 @@ footer {
     flex-direction: column;
   }
 
-  .blog-card{
-    width: 400px
+  .project-details h3 a{
+    color: rgb(0, 106, 255);
   }
 
-  .project-details h3 a{
-    text-decoration: none;
-    color: rgb(73, 73, 73);
-    opacity: 0.8;
-  }
+
+.project-details h3 a:hover {
+    text-decoration: underline;
+}
   
   .project-image {
     width: 100%;
@@ -364,21 +434,21 @@ footer {
   
   .project-details h3 {
     font-size: 1.2rem;
-    color: #007bff;
     margin: 10px 0;
   }
   
   
-  .project-details h3 a:hover {
-    text-decoration: underline;
-    opacity: 1;
-  }
-  
   .project-details p {
     font-size: 0.95rem;
-    color: #555;
   }
-  
+
+
+  /*---- blog properties ----*/
+
+  .blog-card{
+    width: 400px
+  }
+
   .blog-image{
     width: 100%;
     height: 100%;
@@ -386,26 +456,15 @@ footer {
   }
 
 
-.hero3{
-    background: url('img/blog1\ \(2\).jpg') no-repeat center center/cover;
-    text-align: center;
-    padding: 75px 20px;
-    color: rgb(255, 255, 255);
-}
 
-.hero4{
-    background: url('img/contect\ header1\ \(1\).jpg') no-repeat center center/cover;
-    text-align: center;
-    padding: 75px 20px;
-    color: rgb(255, 255, 255);
-}
 
-.container {
-    text-align: center;
-    margin: 10px auto;
-}
+  /*------------------------------------------------------- contact page ---------------------------------*/
 
-.contact-links {
+  .hr_bg5{
+    background: url('img/contect\ header1\ \(1\).png') no-repeat center center/cover;
+  }
+
+  .contact-links {
     display: flex;
     justify-content: center;
     gap: 10%;
@@ -416,7 +475,6 @@ footer {
     margin: 30px auto;
     justify-content: center;
 }
-
 .contact-item {
     text-align: center;
     max-width: 100%;
@@ -428,12 +486,11 @@ footer {
     height: 200px;
     border-radius: 30px;
 }
-
 .contact-item a {
     display: block;
     margin-top: 10px;
     text-decoration: none;
-    color: rgb(73, 73, 73);
+    color: rgb(0, 106, 255);
     opacity: 1;
     font-weight: bold;
 }
@@ -445,7 +502,25 @@ footer {
 
 
 
+/*------------------------------------ footer -----------------------*/
+
+footer {  
+    background-color: #d1cccc;
+    color: #000000; 
+    text-align: center; 
+    width: 100%;
+    bottom: 0;
+}
 
 
-
-
+/*------------------------------------------- DARK  MODE & LIGHT MODE STYLE ----------------------------------*/
+  
+  #modeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}

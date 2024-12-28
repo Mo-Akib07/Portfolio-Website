@@ -1,71 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <title>Responsive Navbar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Mohammad Akib</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+ <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="hero hero4">
-    <header>
-        <div class="logo">Portfolio</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="myresume.html" >My Resume</a></li>
-                <li><a href="projects.html" >Projects</a></li>
-                <li><a href="blog.html" >Blog</a></li>
-                <li><a href="contect.html" class="active">Contact Info</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1>Contact Info</h1>
-    <div class="underline"></div>
-  </div>
-  <div class="container">
-    <div class="contact-links">
-        <!-- LinkedIn -->
-        <div class="contact-item">
-            <a href="https://www.linkedin.com/in/mohammad-akib-321685322/" target="_blank"><img src="img/linkedin.jpeg" alt="LinkedIn"></a>
-            <a href="https://www.linkedin.com/in/mohammad-akib-321685322/" target="_blank">LinkedIn</a>
-        </div>
-        
-        <!-- GitHub -->
-        <div class="contact-item">
-            <a href="https://github.com/Mo-Akib07" target="_blank"><img src="img/github.png" alt="GitHub"></a>
-            <a href="https://github.com/Mo-Akib07" target="_blank">GitHub</a>
-        </div>
-        
-        <!-- Email -->
-        <div class="contact-item">
-            <a href="mailto:your-mohammadakib01561@gmail.com" target="_blank"><img src="img/gmail.png" alt="Outlook"></a>
-            <a href="mailto:your-mohammadakib01561@gmail.com" target="_blank">Email Address</a>
-        </div>
+    <div class="hero hr_bg5">
+            <nav>
+                <!-- Checkbox for toggling menu -->
+                <input type="checkbox" id="check">
 
-        <!-- Instagram -->
-        <div class="contact-item">
-            <a href="https://www.instagram.com/mo_akib_07/" target="_blank"><img src="img/instagram.jpeg" alt="Instagram"></a>
-            <a href="https://www.instagram.com/mo_akib_07/" target="_blank">Instagram</a>
-        </div>
+                <!-- Menu icon -->
+                <button id="modeToggle"  class="checkbtn toggles" aria-label="Toggle Dark/Light Mode">
+                    <span id="toggleIcon" class="icon">☀️</span>
+                  </button>
+                  <label for="check" class="checkbtn">
+                      <i class="fas fa-bars"></i>
+                  </label>
 
-        <!-- Facebook -->
-        <div class="contact-item">
-            <a href="https://www.facebook.com/profile.php?id=61565595531760" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
-            <a href="https://www.facebook.com/profile.php?id=61565595531760" target="_blank">Facebook</a>
-        </div>
+                <!-- Site logo -->
+                <label class="logo">Portfolio</label>
 
-        <!-- Telegram -->
-        <div class="contact-item">
-            <a href="https://t.me/Freecourses76" target="_blank"><img src="img/telegram.png" alt="Telegram"></a>
-            <a href="https://t.me/Freecourses76 " target="_blank">Telegram</a>
-        </div>
+                <!-- Navigation links -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myresume.html" >My Resume</a></li>
+                    <li><a href="projects.html" >Projects</a></li>
+                    <li><a href="blog.html" >Blog</a></li>
+                    <li><a href="contect.html" class="active">Contact Info</a></li>
+                </ul>
+            </nav>
+            <br />
+        <h1>Contact Info</h1>
+        <div class="underline"></div>
     </div>
-  </div>
 
-  <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Mohammad Akib. All rights reserved.</p>
-    </footer>
+  <!-- Section for image -->
+  <div class="contact-links">
+    <!-- LinkedIn -->
+    <div class="contact-item">
+        <a href="https://www.linkedin.com/in/mohammad-akib-321685322/" target="_blank"><img src="img/linkedin.jpeg" alt="LinkedIn"></a>
+        <a href="https://www.linkedin.com/in/mohammad-akib-321685322/" target="_blank">LinkedIn</a>
+    </div>
+    
+    <!-- GitHub -->
+    <div class="contact-item">
+        <a href="https://github.com/Mo-Akib07" target="_blank"><img src="img/github.png" alt="GitHub"></a>
+        <a href="https://github.com/Mo-Akib07" target="_blank">GitHub</a>
+    </div>
+    
+    <!-- Email -->
+    <div class="contact-item">
+        <a href="mailto:your-mohammadakib01561@gmail.com" target="_blank"><img src="img/gmail.png" alt="Outlook"></a>
+        <a href="mailto:your-mohammadakib01561@gmail.com" target="_blank">Email Address</a>
+    </div>
+
+    <!-- Instagram -->
+    <div class="contact-item">
+        <a href="https://www.instagram.com/mo_akib_07/" target="_blank"><img src="img/instagram.jpeg" alt="Instagram"></a>
+        <a href="https://www.instagram.com/mo_akib_07/" target="_blank">Instagram</a>
+    </div>
+
+    <!-- Facebook -->
+    <div class="contact-item">
+        <a href="https://www.facebook.com/profile.php?id=61565595531760" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/profile.php?id=61565595531760" target="_blank">Facebook</a>
+    </div>
+
+    <!-- Telegram -->
+    <div class="contact-item">
+        <a href="https://t.me/Freecourses76" target="_blank"><img src="img/telegram.png" alt="Telegram"></a>
+        <a href="https://t.me/Freecourses76 " target="_blank">Telegram</a></p>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 Mohammad Akib. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+
 </body>
+
 </html>

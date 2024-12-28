@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="hero">
-        <header>
-            <div class="logo">Portfolio</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="myresume.html">My Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contect.html">Contact Info</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="hero hr_bg1">
+        <nav>
+            <!-- Checkbox for toggling menu -->
+            <input type="checkbox" id="check">
 
-        <h1>Mohammad Akib</h1>
-        <div class="underline"></div>
+            <!-- Site logo -->
+            <label class="logo">Portfolio</label>
+    
+            <!-- Menu icon -->
+            <button id="modeToggle"  class="checkbtn toggles" aria-label="Toggle Dark/Light Mode">
+              <span id="toggleIcon" class="icon">☀️</span>
+            </button>
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+    
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="myresume.html" >My Resume</a></li>
+                <li><a href="projects.html" >Projects</a></li>
+                <li><a href="blog.html" >Blog</a></li>
+                <li><a href="contect.html" >Contact Info</a></li>
+            </ul>
+        </nav>
+        <br />
+    <h1>Mohammad Akib</h1>
+    <div class="underline"></div>
     </div>
+
 
     <section class="about">
         <div class="content">
@@ -62,5 +77,6 @@
         </div>
     </section>
     <footer> <p>&copy; 2024 Mohammad Akib. All rights reserved.</p> </footer>
+    <script src="script.js"></script>
 </body>
 </html>
